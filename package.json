@@ -1,6 +1,6 @@
 {
   "name": "petstoreui",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "dependencies": {
     "angular-ui-bootstrap": "^1.3.3",
     "bootstrap": "^3.3.4",
