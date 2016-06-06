@@ -2,4 +2,5 @@ applications:
 - name: petstore-ui
   memory: 64M
   path : dist
+  host: petstore-ui
   buildpack: staticfile_buildpack
