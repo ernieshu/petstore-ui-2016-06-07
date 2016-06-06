@@ -25,7 +25,7 @@ angular.module('petstoreUiApp')
 
       // pre-process the photoUrls, so that only strings are passed, rather than full objects
       var photoUrlStrings = [];
-      if (this.pet.photoUrls!==null) {
+      if (typeof this.pet.photoUrls!= 'undefined') {
         photoUrlStrings = this.pet.photoUrls.map(function(photoUrl) { return photoUrl.text; });
       };
 
@@ -37,13 +37,13 @@ angular.module('petstoreUiApp')
       if (this.pet.status!==null) {
         petToBeAdded['status'] = this.pet.status.toUpperCase();
       };
-      if (this.pet.categoryId!==null) {
+      if (this.pet.categoryId!=null) {
         petToBeAdded['category'] = { id: this.pet.categoryId };
       };
-      if (this.pet.tags!==null) {
+      if (typeof this.pet.tags!= 'undefined') {
         petToBeAdded['tags'] = this.pet.tags;
       };
-      if (photoUrlStrings!==null) {
+      if (photoUrlStrings.length > 0) { 
         petToBeAdded['photoUrls'] = photoUrlStrings;
       };
 
